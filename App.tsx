@@ -1,8 +1,9 @@
-import { ActivityIndicator, Text, View } from 'react-native';
+import { ActivityIndicator, StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
+import { NunitoSans_400Regular, NunitoSans_700Bold, useFonts } from '@expo-google-fonts/nunito-sans';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 import theme from './src/theme';
-import { useFonts } from 'expo-font';
-import { NunitoSans_400Regular, NunitoSans_700Bold } from '@expo-google-fonts/nunito-sans';
 import Home from './src/screens/Home';
 
 export default function App() {
@@ -10,7 +11,14 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Home /> : <ActivityIndicator />}
+      <SafeAreaProvider>
+        {fontsLoaded ? <Home /> : <ActivityIndicator />}
+      </SafeAreaProvider>
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle={"dark-content"}
+        translucent
+      />
     </ThemeProvider>
   );
 }
