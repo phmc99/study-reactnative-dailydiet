@@ -1,10 +1,10 @@
 import * as S from "./styles"
-import ArrowUpRight from '../../../assets/icons/ArrowUpRight.png';
+import SvgComponent from "../Svg/ArrowUpRight";
 
 export default function HomeDietStatus() {
   return (
-    <S.Container isOutOfDiet={true}>
-      <S.IconView><S.Icon isOutOfDiet={false} source={ArrowUpRight} /></S.IconView>
+    <S.Container isOutOfDiet={false}>
+      <S.IconView><SvgComponent isOutOfDiet={false} /></S.IconView>
       <S.StatusText>90,86%</S.StatusText>
       <S.Text>das refeições dentro da dieta</S.Text>
     </S.Container>

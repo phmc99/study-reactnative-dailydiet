@@ -6,9 +6,7 @@ interface DietStatusProps {
 }
 
 const greenBackground = theme.colors.lightGreen
-const greenText = theme.colors.green
 const redBackground = theme.colors.roseLight
-const redText = theme.colors.red
 
 export const Container = styled.View<DietStatusProps>`
   position: relative;
@@ -39,9 +37,4 @@ export const IconView = styled.View`
   position: absolute;
   top: 0;
   right: 0;
-`;
-
-export const Icon = styled.Image<DietStatusProps>`
-  width: 30px;
-  height: 30px;
 `;
