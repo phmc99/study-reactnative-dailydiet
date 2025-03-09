@@ -23,13 +23,13 @@ export const Container = styled.View<DietStatusProps>`
 export const StatusText = styled.Text`
   color: ${({ theme }) => theme.colors.gray700};
   font-family: ${({ theme }) => theme.fontFamily.bold};
-  font-size: ${({ theme }) => theme.fontSize.xl3};
+  font-size: ${({ theme }) => theme.fontSize.xl3}px;
 `;
 
 export const Text = styled.Text`
   color: ${({ theme }) => theme.colors.gray600};
   font-family: ${({ theme }) => theme.fontFamily.regular};
-  font-size: ${({ theme }) => theme.fontSize.lg};
+  font-size: ${({ theme }) => theme.fontSize.lg}px;
 `;
 
 export const IconView = styled.View`
