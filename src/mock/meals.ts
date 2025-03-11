@@ -1,9 +1,4 @@
-type Meal = {
-  name: string;
-  description: string;
-  date: Date;
-  isOnDiet: boolean;
-};
+import { Meal } from "../models/meal";
 
 const meals: Meal[] = [
   {

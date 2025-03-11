@@ -1,14 +1,14 @@
+import { Meal } from "../../models/meal"
 import * as S from "./styles"
 
-interface MealItemProps {
-  hour: string;
-  name: string;
-  isOnDiet: boolean;
+interface MealItemProps extends Partial<Meal> {
+  hour: string
+  onPress: () => void
 }
 
-export default function MealItem({ hour, name, isOnDiet }: MealItemProps) {
+export default function MealItem({ hour, name, isOnDiet, onPress }: MealItemProps) {
   return (
-    <S.MealContainer>
+    <S.MealContainer onTouchEnd={onPress}>
       <S.MealDateTitleBox>
         <S.Hour>{hour}</S.Hour>
         <S.Divider />

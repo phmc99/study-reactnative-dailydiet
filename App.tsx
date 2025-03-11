@@ -4,7 +4,7 @@ import { NunitoSans_400Regular, NunitoSans_700Bold, useFonts } from '@expo-googl
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import theme from './src/theme';
-import Home from './src/screens/Home';
+import Routes from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ NunitoSans_400Regular, NunitoSans_700Bold })
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaProvider>
-        {fontsLoaded ? <Home /> : <ActivityIndicator />}
+        {fontsLoaded ? <Routes /> : <ActivityIndicator />}
       </SafeAreaProvider>
       <StatusBar
         backgroundColor="transparent"
